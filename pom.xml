@@ -74,6 +74,18 @@
 	</dependencies>
 	<build>
 		<finalName>springmvc</finalName>
+		<pluginManagement>
+   <plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>          
+        <configuration>
+            <source>1.7</source>
+            <target>1.7</target>
+        </configuration>
+    </plugin>
+   </plugins>
+  </pluginManagement>
 	</build>
 	<properties>
 		<org.springframework.version>3.0.5.RELEASE</org.springframework.version>
