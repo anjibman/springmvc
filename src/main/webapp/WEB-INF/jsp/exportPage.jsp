@@ -7,6 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 <script type="text/javascript" src="<c:url value="/js/jquery-1.11.2.min.js"/>"></script>
+<link rel="stylesheet" href="<c:url value="/css/jquery.dataTables.min.css"/>">
 <script type="text/javascript" src="<c:url value="/js/dataTables.tableTools.js"/>"></script>
 </head>
 <body>
@@ -28,7 +29,8 @@
 			</tr>
 		</tbody>
 	</table>
-
+<br>
+<br>
 	<table id="secondTable">
 		<thead>
 			<tr>
@@ -49,3 +51,16 @@
 	</table>
 </body>
 </html>
+
+<script>
+$(document).ready(function() {
+    $('#firstTable').DataTable({
+    	"dom": 'Tt',
+    	"ordering": false,
+        "tableTools": {
+            "sSwfPath": "../swf/copy_csv_xls_pdf.swf"
+        }
+    });
+    $('#secondTable').DataTable();
+} );
+</script>
